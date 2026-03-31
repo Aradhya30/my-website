@@ -2,159 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Website</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- Header -->
-<header>
-  <h1>My Website</h1>
-  <p>Multi-Section Webpage using HTML5 & CSS3</p>
-</header>
-
 <!-- Navbar -->
-<nav>
-  <a href="#home">Home</a>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">MySite</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!-- Home -->
-<section id="home">
-  <h2>Welcome</h2>
-  <p>This is the homepage of your website.</p>
-</section>
-
-<!-- About -->
-<section id="about">
-  <h2>About Us</h2>
-  <p>We create simple and responsive websites using HTML and CSS.</p>
-</section>
-
-<!-- Services -->
-<section id="services">
-  <h2>Our Services</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>Web Design</h3>
-      <p>Clean and modern designs.</p>
-    </div>
-
-    <div class="card">
-      <h3>Development</h3>
-      <p>Responsive and fast websites.</p>
-    </div>
-
-    <div class="card">
-      <h3>Support</h3>
-      <p>24/7 assistance.</p>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+      </ul>
     </div>
   </div>
+</nav>
 
+<!-- Hero Section -->
+<section class="hero text-center text-white d-flex align-items-center">
+  <div class="container">
+    <h1>Build Modern Websites</h1>
+    <p>Responsive landing page using Bootstrap & CSS3</p>
+    <a href="#" class="btn btn-primary">Get Started</a>
+  </div>
 </section>
 
-<!-- Contact -->
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: example@email.com</p>
+<!-- Features -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h2>Our Features</h2>
+    <div class="row mt-4">
+      
+      <div class="col-md-4">
+        <h4>Fast</h4>
+        <p>Optimized performance and speed.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h4>Responsive</h4>
+        <p>Works on all devices.</p>
+      </div>
+
+      <div class="col-md-4">
+        <h4>Modern</h4>
+        <p>Clean and attractive UI.</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
-<footer>
-  <p>© 2026 My Website</p>
+<footer class="bg-dark text-white text-center p-3">
+  <p>© 2026 MySite</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body {
-  line-height: 1.6;
-}
-
-/* Header */
-header {
-  background: #1e1e2f;
-  color: white;
-  text-align: center;
-  padding: 30px;
-}
-
-/* Navbar */
-nav {
-  background: #333;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav a {
-  color: white;
-  padding: 15px 20px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  background: #555;
-}
-
-/* Sections */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-#home { background: #f4f4f4; }
-#about { background: #eaeaea; }
-#services { background: #dddddd; }
-#contact { background: #cccccc; }
-
-/* Cards */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background: white;
-  padding: 20px;
-  width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Footer */
-footer {
-  background: #1e1e2f;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  nav {
-    flex-direction: column;
-  }
-}
